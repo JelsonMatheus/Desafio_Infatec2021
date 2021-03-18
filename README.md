@@ -26,7 +26,7 @@ cadastro de alunos, professores, turmas e gerar relatórios.
 * Escola: Escola Programação Django
 * Series: 1°, 2°, 3°, 4°, 5°, 6°, 7°, 8° e 9°
 
-## Dados cadastrados pelos furmularios:
+## Dados cadastrados pelo sistema
 #### Aluno
 * Leandro da Silva - 1 °
 * joão da Silva João - 1°
