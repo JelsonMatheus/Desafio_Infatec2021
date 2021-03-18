@@ -31,6 +31,7 @@ Para rodar um servidor local Django e utilizar a aplicação será nescessario s
 Com as configurações de dependências feitas, no repositório do projetos
 já existe um banco de dados **apenas** para teste com dados pre-cadastrados. 
 Basta inicializar o servidor:
+
 1 - Iniciar servidor Django
 - **python manage.py runserver**
 
@@ -51,7 +52,7 @@ Caso não utilize o banco de dados, você deve seguir os procedimentos:
 
 3 - Inicializar seguindo os passos já descritos.
 
-4 - Realizar o login e acessar path /admin/
+4 - Realizar o login e acessar *path:* /admin/
 - Realize o cadastro de uma escola e series manualmente pelo Django admin.
 
 5 - A partir daí você pode voltar a página principal da aplicação.
