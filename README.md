@@ -57,7 +57,7 @@ cadastro de alunos, professores, turmas e gerar relatórios.
 * 1/2/3 C
 
 ## Path para consulta de dados:
-#### `/relatorio/consulta-alunos/`:
+##### /relatorio/consulta-alunos/
 Returna um **json** que contém uma lista de objetos aluno:
 ```
 aluno:
@@ -71,7 +71,7 @@ aluno:
 }
 ```
 
-#### `/relatorio/consulta-professores/`:<br>
+##### /relatorio/consulta-professores/
 retorna um **json** que contém uma lista de professores
 ```
 {
@@ -84,7 +84,7 @@ retorna um **json** que contém uma lista de professores
 }
 ```
 
-#### `/relatorio/consulta-turma/ ` ou `/relatorio/consulta-turma/<serie_id>/`
+##### /relatorio/consulta-turma/ ou /relatorio/consulta-turma/<serie_id>/
 ```
 retorna um **json** com uma lista de turmas:
 {
