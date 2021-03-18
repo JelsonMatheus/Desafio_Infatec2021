@@ -85,8 +85,8 @@ retorna um **json** que contém uma lista de professores
 ```
 
 ##### /relatorio/consulta-turma/ ou /relatorio/consulta-turma/<serie_id>/
-```
 retorna um **json** com uma lista de turmas:
+```
 {
      "turmas" : [
           {
