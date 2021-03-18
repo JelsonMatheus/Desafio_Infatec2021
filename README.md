@@ -1,5 +1,5 @@
 # Desafio Infatec - 2021
-![print do projeto](print.jpg)<br>
+<img src="print.jpg" width="600"><br>
 Sistema para gestão escolar no qual poderá realizar
 cadastro de alunos, professores, turmas e gerar relatórios.
 
