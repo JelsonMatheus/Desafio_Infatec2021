@@ -43,11 +43,11 @@ Caso não utilize o banco de dados, você deve seguir os procedimentos:
 - **python manage.py makemigrations**
 - **python manage.py migrate***
 
-2 - Criar um superuser com nome adim:
+2 - Criar um superuser com nome admin:
 - **python manage.py createsuperuser --username admin**
-- **Email address: example@gmail.com**
-- **Password: 123456**
-- **Password(again): 123456**
+- Email address: example@gmail.com**
+- Password: ******
+- Password(again): ******
 - confirme se necessário.
 
 3 - Inicializar seguindo os passos já descritos.
