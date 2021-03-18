@@ -1,0 +1,75 @@
+body {
+    background: #f5f5f5;
+}
+
+.jumbotron {
+    padding: 4rem 1rem 4rem 1rem;
+    background:linear-gradient(180deg, rgba(200, 200, 200, 0.3), 
+        rgba(100, 100, 100, 0)), url("../img/bg-relatorio.jpg");
+    background-size: 100% 100%;
+    margin-bottom: 4rem;
+}
+    .jumbotron > h1 {
+        max-width: 15rem;
+        background: rgba(200, 250, 250, 0.8);
+        margin: auto;
+        border-radius: 10px;
+    }
+
+.card {
+    background: rgb(200, 250, 250) !important;
+}
+    .card span {
+        font-size: 1.2rem;
+    }
+
+section .btn {
+    background: #fb8256;
+}
+
+.btn-imprimir {
+    background: gray;
+    color: white;
+    border: 1px solid black;
+}
+
+.tabela-container {
+    overflow: auto;
+    max-height: 30rem;
+}
+
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    main {
+        max-width: 75%;
+        margin: auto;
+    }
+    
+    .jumbotron {
+        padding: 6rem 1rem 6rem 1rem;
+    }
+}
+
+@media print {
+    html, body {
+        width: 100%;
+    }
+    
+    h1 {
+        margin-bottom: 2cm;
+        text-align: center;
+    }
+    
+    .no-print, .no-print *{
+        display: none !important;
+    }
+    
+    #print-titulo {
+        padding-bottom: 2rem;
+    }
+    
+    @page {
+        margin: 3cm;
+    }
+}

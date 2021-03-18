@@ -1,0 +1,183 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    
+    <title>Relatório</title>
+    
+    <!--Bootstrap CSS v4.6-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <!--styles personalizados-->
+    <link rel="stylesheet" href="{% static 'css/relatorio.css' %}"/>
+    
+</head>
+
+<body>
+    
+    <header>
+        {% include "header.html" %}
+    </header>
+    
+    <main>
+    <div class="container mt-5">
+        
+        <div class="no-print jumbotron text-center">
+            <h1 class="display-5">Relatório</h1>
+        </div>
+        
+        <div class="d-flex justify-content-center">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5>Total Alunos</h5>
+                    <span>{{ total_alunos}}</span>
+                </div>
+            </div>
+            <div class="card ml-2 text-center">
+                <div class="card-body text-center">
+                    <h5>Total Professores</h5>
+                    <span>{{ total_professores }}</span>
+                </div>
+            </div>
+        </div>
+        
+        <br><br>
+        
+        <!--Alunos por turmas-->
+        
+        <section id="sectionAlunos">
+            <h5 class="mb-3">Alunos por turma:</h5>
+            
+            <div class="input-group mb-1 no-print" style="max-width:20rem">
+                <select class="custom-select" id="selectTurma">
+                    {% for turma in turmas %}
+                        <option value="{{ turma.id }}">{{ turma }}</option>
+                    {% endfor %}
+                </select>
+                <div class="input-group-append">
+                    <button id="btnBuscarAlunos" class="btn">pesquisar</button>
+                </div>
+            </div>
+            
+            <div class="tabela-container">
+                <table id="tabelaAlunos" class="table table-striped table-bordered">
+                   <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Aluno(a)</th>
+                            <th scope="col">Serie</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--conteúdo carregado dinamicamente-->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="d-flex no-print">
+                <button class="btn ml-auto" onclick="printDiv(sectionAlunos)">
+                    Imprimir
+                </button>
+            </div>
+            
+        </section>
+            
+        <br><br>
+            
+        <!--Lista Professores-->
+        
+        <section id="sectionProfessores">
+            <h5 class="mb-3">Professores:</h5>
+            
+            <div class="tabela-container">
+                <table id="tabelaProfessores" class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Professor(a)</th>
+                            <th scope="col">Turmas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--conteúdo carregado dinamicamente-->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="d-flex no-print">
+                <button class="btn ml-auto" onclick="printDiv(sectionProfessores)">
+                    Imprimir
+                </button>
+            </div>
+            
+        </section>
+            
+        <br><br>
+            
+        <!--Lista turmas-->
+        
+        <section id="sectionTurmas">
+            <h5 class="mb-3">Turmas Cadastradas:</h5>
+            
+            <div class="input-group mb-1 no-print" style="max-width:20rem">
+                <select class="custom-select" id="selectSerie">
+                    <option value=""> Todas as séries</option>
+                    {% for serie in series %}
+                        <option value="{{ serie.id }}">{{ serie }} série</option>
+                    {% endfor %}
+                </select>
+                <div class="input-group-append">
+                    <button id="btnBuscarTurmas" class="btn">pesquisar</button>
+                </div>
+            </div>
+            
+            <div class="tabela-container">
+                <table id="tabelaTurmas" class="table table-striped table-bordered">
+                   <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Turma(s)</th>
+                            <th scope="col">Série(s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--conteúdo carregado dinamicamente-->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="d-flex no-print">
+                <button class="btn ml-auto" onclick="printDiv(sectionTurmas)">
+                    Imprimir
+                </button>
+            </div>
+            
+        </section>
+        
+        <div class="mt-5 no-print">
+            <button class="btn btn-imprimir" onclick="printDiv(document.querySelector('main'))">
+                    Imprimir página.
+            </button>
+        </div>
+    </div>
+    </main>
+    
+    <footer class="text-center mt-5 p-2">
+        <span class="text-muted small"> &copy; Jelson Matheus</span>
+    </footer>
+    
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    
+    <script src="{% static 'js/relatorio.js' %}"></script>
+    
+</body>
+  
+</html>
