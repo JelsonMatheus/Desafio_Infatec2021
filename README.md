@@ -13,48 +13,48 @@ cadastro de alunos, professores, turmas e gerar relatórios.
 * javascript
 * Python, Django
 
-## Instalação e  Executando:
-* Dependências Django v3.1.7
-* Na pasta *escola* rodar o comando:<br>
-`python manage.py runserver`
-* Realizar o login no sistema:
-  * login: __admin__
-  * Senhar: __123456__
 
-## Dados Pre-cadastrados:
-* Superuser: admin
-* Escola: Escola Programação Django
-* Series: 1°, 2°, 3°, 4°, 5°, 6°, 7°, 8° e 9°
+# Configurações:
 
-## Dados cadastrados pelo sistema
-#### Aluno
-* Leandro da Silva - 1 °
-* joão da Silva João - 1°
-* Maria da Silva Maria - 1°
-* Carlos Araujo João - 1°
-* Carlos da Silva - 2°
-* Ana Maria julia - 2°
-* Alvem João - 2°
-* Beatriz da Silva - 3°
-* Pedro da Silva - 3° 
+Para rodar um servidor local Django e utilizar a aplicação será nescessario seguir as seguintes etapas.
 
-#### Professores:
-* Prof João Cardoso
-* Prof Marcos Cardoso
-* Prof Maria Cardoso
-* Prof Pedro Araujo
-* Prof Juliana Araujo
-* Prof Osvaldo da Silva 
+1 - Criar o ambiente virtual para instalar as dependencias do projeto.
+- **pyton -m venv venv**
 
-#### Turmas:
-* 1 A
-* 1 B
-* 2 A
-* 2 B
-* 3 A
-* 3 B
-* 1/2/3 A
-* 1/2/3 C
+2 - Ativar o ambiente virtual.
+- windows -
+- **venv\scripts\activate**
+
+3 - Instalar as dependencias.
+- **pip install -r .\requirements.txt**
+
+Com as configurações de dependências feitas, no repositório do projetos
+já existe um banco de dados **apenas** para teste com dados pre-cadastrados. 
+Basta inicializar o servidor:
+1 -- Iniciar servidor Django
+- **python manage.py runserver**
+
+2 -- O servidor será iniciado em localhost:8000
+- Os path seguem apartir dai.
+
+Caso não utilize o banco de dados, você deve seguir os procedimentos:
+1 -- Realizar o makemigrations e migrate
+- **python manage.py makemigrations**
+- **python manage.py migrate***
+
+2 -- Criar um superuser com nome adim:
+- **python manage.py createsuperuser --username admin**
+- **Email address: example@gmail.com**
+- **Password: 123456**
+- **Password(again): 123456**
+- confirme se necessário.
+
+3 -- Inicializar seguindo os passos já descritos.
+
+4 -- Realizar o login e acessar path /admin/
+- **Realize o cadastros de uma escola e series manualmente pelo Django admin.**
+
+5 -- A partir daí você pode voltar a página principal da aplicação.
 
 ## Path para consulta de dados:
 ##### /relatorio/consulta-alunos/
@@ -98,5 +98,8 @@ retorna um **json** com uma lista de turmas:
 }
 ```
 
+## Observações:
+1 -- Os dados no banco de dados são todos fictícios e devem usar usados
+Apenas para testes.
 
 
