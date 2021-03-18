@@ -36,6 +36,13 @@ Basta inicializar o servidor:
 - **python manage.py runserver**
 
 2 - O servidor será iniciado em localhost:8000
+```
+System check identified no issues (0 silenced).
+February 15, 2021 - 13:31:53
+Django version 3.1.6, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+```
 - Os path seguem apartir dai.
 
 Caso não utilize o banco de dados, você deve seguir os procedimentos:
