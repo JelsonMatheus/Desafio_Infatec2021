@@ -63,7 +63,7 @@ Caso não utilize o banco de dados, você deve seguir os procedimentos:
 
 2 - Criar um superuser com nome admin:
   ```sh
-  python manage.py createsuperuser --username admin**
+  python manage.py createsuperuser --username admin
   Email address: example@mail.com
   Password: ******
   Password(again): ******
