@@ -64,7 +64,7 @@ Caso não utilize o banco de dados, você deve seguir os procedimentos:
 2 - Criar um superuser com nome admin:
   ```sh
   python manage.py createsuperuser --username admin**
-  Email address: example@mail.com**
+  Email address: example@mail.com
   Password: ******
   Password(again): ******
   ```
@@ -78,45 +78,45 @@ Caso não utilize o banco de dados, você deve seguir os procedimentos:
 5 - A partir daí você pode voltar a página principal da aplicação.
 
 ## Path para consulta de dados:
-* /relatorio/consulta-alunos/
+1 - /relatorio/consulta-alunos/
   - Retorna um **json** que contém uma lista de aluno.ch
-    ```json
+  ```js
+  }
+      "alunos" : [
+          {
+              "nome" : "nome", 
+              "serie" : "serie"
+          }, 
+       ]
     }
-        "alunos" : [
-            {
-                "nome" : "nome", 
-                "serie" : "serie"
-            }, 
-         ]
-    }
-    ```
+  ```
 
-* /relatorio/consulta-professores/
+2 - /relatorio/consulta-professores/
   - Retorna um **json** que contém uma lista de professores.
-    ```json
-    {
-        "professores": [
-            {
-                "nome'": "nome", 
-                "turma": 'turma"
-            }, 
-         ]
-    }
-    ```
+  ```js
+  {
+      "professores": [
+          {
+              "nome'": "nome", 
+              "turma": 'turma"
+          }, 
+       ]
+  }
+  ```
 
-* /relatorio/consulta-turma/ ou /relatorio/consulta-turma/<serie_id>/
+3 - /relatorio/consulta-turma/ ou /relatorio/consulta-turma/<serie_id>/
   - Retorna um **json** com uma lista de turmas.
-    ```json
-    {
-        "turmas" : [
-            {
-                "nome" : "nome",
-                "series" : [ ],
-                "id" : "turma_id"
-            },
-      ]
-    }
-    ```
+  ```js
+  {
+      "turmas" : [
+          {
+              "nome" : "nome",
+              "series" : [ ],
+              "id" : "turma_id"
+          },
+      ]
+  }
+  ```
 
 ## Observações:
 * Os dados no banco de dados são todos fictícios e são usados
