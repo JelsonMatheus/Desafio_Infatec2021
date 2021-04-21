@@ -118,8 +118,5 @@ Caso não utilize o banco de dados, você deve seguir os procedimentos:
   }
   ```
 
-## Observações:
-* Os dados no banco de dados são todos fictícios e são usados
-apenas para testes.
 
 
